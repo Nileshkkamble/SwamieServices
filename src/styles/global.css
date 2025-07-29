@@ -1,0 +1,148 @@
+/* global.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #004aad;
+    padding: 0.1rem 0.3rem;
+    color: white;
+    padding: 0.5rem 1.5rem; 
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero section */
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #e6f0ff;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Services */
+  .services {
+    padding: 2rem 0;
+  }
+  
+  .services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .service-card {
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Image part of the card */
+  .card-image {
+    display: block;
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-image:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Text part below image */
+  .card-text {
+    padding: 1rem;
+  }
+  
+  .card-text h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Background images */
+  .bg-documents {
+    background-image: url('src/assets/onlineservice1.avif');
+  }
+  
+  .bg-government {
+    background-image: url('src/assets/onlineeservice.jpeg');
+  }
+  
+  .bg-online {
+    background-image: url('src/assets/csc1.png');
+  }
+  
+  /* Contact section */
+  .contact {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #fff3cd;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  section {
+    scroll-margin-top: 80px; /* Offset scroll position */
+    padding-top: 1rem;
+  }
+  
+  

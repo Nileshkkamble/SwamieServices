@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import '../styles/global.css'; // link to custom CSS
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<Layout>
+  <Navbar />
+
+  <main class="container">
+    <section class="hero">
+      <h1>Welcome to Swami E-Service Solutions</h1>
+      <p>Your one-stop destination for reliable, fast, and affordable online services.</p>
+    </section>
+
+    <section id="services" class="services">
+		<h2>Our Services</h2>
+		<div class="service-list">
+		  <div class="service-card">
+			<a href="/services/documents" class="card-image bg-documents"></a>
+			<div class="card-text">
+			  <h3>📄 Document Services</h3>
+			  <p>PAN card, Aadhar update, voter ID, and more — all from the comfort of your home.</p>
+			</div>
+		  </div>
+	  
+		  <div class="service-card">
+			<a href="/services/government" class="card-image bg-government"></a>
+			<div class="card-text">
+			  <h3>🏛️ Government Schemes</h3>
+			  <p>Apply for PMAY, pensions, and subsidies with ease and accuracy.</p>
+			</div>
+		  </div>
+	  
+		  <div class="service-card">
+			<a href="/services/online-applications" class="card-image bg-online"></a>
+			<div class="card-text">
+			  <h3>🌐 Online Applications</h3>
+			  <p>Passports, licenses, scholarships — done quickly and correctly.</p>
+			</div>
+		  </div>
+		</div>
+	</section>
+
+<section id="contactform">
+	<ContactForm />
+</section>
+
+    <section id="contact" class="contact">
+      <h2>Need Help?</h2>
+      <p>Call us or reach out via email for personalized assistance. We’re here to make digital services simple for everyone.</p>
+    </section>
+
+	
+  </main>
+</Layout>
+
