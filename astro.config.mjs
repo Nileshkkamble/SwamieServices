@@ -5,4 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     site: 'https://Nileshkkamble.github.io/SwamieServices/',
     outDir: './dist',
+    base: '/SwamieServices/',
 });
