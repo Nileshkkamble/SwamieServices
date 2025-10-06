@@ -1,9 +1,15 @@
 <nav class="navbar">
   <div class="navbar-container">
     <a href="/" class="logo">
-      <img src="/SwamieServices/swami_e_seva_logo.png" alt="Swami e Seva Logo" class="logo-img" />
-      Swami online Services
+      <img src="../src/assets/swami_e_seva_logo.png" alt="Swami e Seva Logo" class="logo-img" />
+      Swami Online Services
     </a>
+
+    <!-- Hamburger Menu Button -->
+    <button class="menu-toggle" aria-label="Toggle menu">
+      ☰
+    </button>
+
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/#services">Services</a></li>
@@ -12,7 +18,42 @@
   </div>
 </nav>
 
-<style>.logo {
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    // Toggle menu when hamburger clicked
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Close menu when any link is clicked
+    navItems.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  });
+</script>
+
+
+<style>
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+}
+
+.logo {
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -21,8 +62,77 @@
 }
 
 .logo-img {
-  width: 40px; /* adjust as needed */
+  width: 40px;
   height: auto;
-  margin-right: 10px; /* space between logo and text */
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* --- Mobile Styles --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    display: none; /* hidden by default */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex; /* shown when menu toggled */
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo-img {
+    width: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 0.9rem;
+  }
+
+  .logo-img {
+    width: 28px;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+  }
 }
 </style>
