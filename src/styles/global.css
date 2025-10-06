@@ -120,17 +120,22 @@ body {
   }
   
   /* Background images */
-  .bg-documents {
-    background-image: url('src/assets/onlineservice1.avif');
+
+  .card-image {
+    display: block;
+    width: 100%;
+    height: 180px; /* adjust as needed */
+    overflow: hidden;
+    border-radius: 8px;
   }
   
-  .bg-government {
-    background-image: url('src/assets/onlineeservice.jpeg');
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures image covers the box */
+    display: block;
   }
   
-  .bg-online {
-    background-image: url('src/assets/csc1.png');
-  }
   
   /* Contact section */
   .contact {
