@@ -1,0 +1,43 @@
+---
+import documentImage from '../assets/onlineservice1.avif';
+import governmentimage from '../assets/onlineeservice.jpeg';
+import onlineapplicationimage from '../assets/csc1.png';
+
+const services = [
+  {
+    title: "📄 Document Services",
+    description: "PAN card, Aadhar update, voter ID, and more — all from the comfort of your home.",
+    link: "/services/documents",
+    image: documentImage
+  },
+  {
+    title: "🏛️ Government Schemes",
+    description: "Apply for PMAY, pensions, and subsidies with ease and accuracy.",
+    link: "/services/government",
+    image: governmentimage
+  },
+  {
+    title: "🌐 Online Applications",
+    description: "Passports, licenses, scholarships — done quickly and correctly.",
+    link: "/services/online-applications",
+    image: onlineapplicationimage
+  }
+];
+---
+
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="service-list">
+    {services.map(service => (
+      <div class="service-card">
+        <a href={service.link} class="card-image">
+          <img src={service.image.src} alt={service.title} class="card-img" />
+        </a>
+        <div class="card-text">
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

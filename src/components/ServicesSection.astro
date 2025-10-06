@@ -1,0 +1,47 @@
+---
+import documentImage from '../assets/onlineservice1.avif'; // update with your actual image path
+
+const services = [
+  {
+    title: "📄 Domicile Certificate",
+    description: "Swami Maha E Seva Kendra & CSC Center provides efficient services for obtaining domicile certificates, simplifying the bureaucratic process for residents of Kandivali. Trust us to navigate the complexities and ensure swift issuance of your domicile certificate with utmost convenience."
+  },
+  {
+    title: "📄 Income Certificate",
+    description: "Swami Maha E Seva Kendra & CSC Center offers hassle-free assistance in acquiring income certificates, facilitating access to essential government benefits and services for residents of Kandivali. Rely on us for swift processing and accurate documentation."
+  },
+  {
+    title: "📄 Non Creamy Layer Certificate",
+    description: "Swami Maha E Seva Kendra & CSC Center facilitates the smooth acquisition of Non Creamy Layer certificates, crucial for accessing reserved government benefits and educational opportunities. Trust us for prompt processing and precise documentation."
+  },
+  {
+    title: "📄 Online Leave and License",
+    description: "Swami Maha E Seva Kendra & CSC Center simplifies the process of obtaining online leave and license agreements, ensuring swift and convenient transactions for landlords and tenants in Kandivali. With our user-friendly platform, manage your rental agreements seamlessly."
+  },
+  {
+    title: "📄 Gazette Certificate",
+    description: "Swami Maha E Seva Kendra & CSC Center offers expedited services for acquiring Gazette certificates, essential for legal name changes and official notifications in Kandivali. Trust our expertise for swift processing and accurate documentation."
+  },
+  {
+    title: "📄 Online Leave and License Agreements",
+    description: "Swami Maha E Seva Kendra & CSC Center offers expedited services for acquiring License Agreements, essential for Leave and License Agreements in Kandivali. Trust our expertise for swift processing and accurate documentation."
+  }
+];
+---
+
+<section id="What_we_provide" class="services">
+  <h2>What we Provide</h2>
+  <div class="service-list">
+    {services.map(service => (
+      <div class="service-card">
+        <a href="/services/documents" class="card-image">
+          <img src={documentImage.src} alt={service.title} class="card-img" />
+        </a>
+        <div class="card-text">
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

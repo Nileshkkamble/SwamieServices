@@ -6,7 +6,8 @@ import ContactForm from '../components/ContactForm.astro';
 import documentImage from '../assets/onlineservice1.avif';
 import governmentimage from '../assets/onlineeservice.jpeg';
 import onlineapplicationimage from '../assets/csc1.png';
-
+import ServicesSection from '../components/ServicesSection.astro';
+import OurServices from '../components/OurServices.astro';
 ---
 
 <Layout>
@@ -15,47 +16,24 @@ import onlineapplicationimage from '../assets/csc1.png';
   <main class="container">
     <section class="hero">
       <h1>Welcome to Swami E-Service Solutions</h1>
-      <p>Your one-stop destination for reliable, fast, and affordable online services.</p>
+      <p>Swami Maha E Seva Kendra: Your one-stop center for hassle-free administrative services. We simplify complex processes for Domicile, Income, and Non-Creamy Layer Certificates, ensuring accurate and timely documentation. Get your Online Leave and License agreements, Marriage Certificates, and Gazetted Notifications processed efficiently. We also assist with New Driving Licenses, Vehicle Insurance, and Senior Citizen Cards. Our expertise extends to Udyam Registration, Gumasta License, FSSAI License, Voter ID Card issuance, GST Registration, and Passport Seva. Benefit from our fast, reliable, and expert services. Visit us today for a seamless experience! 😊</p>
     </section>
 
-    <section id="services" class="services">
-		<h2>Our Services</h2>
-		<div class="service-list">
-		  <div class="service-card">
-			<a href="/services/documents" class="card-image">
-				<img src={documentImage.src} alt="Document Services" class="card-img" />
-			  </a>
-			<div class="card-text">
-			  <h3>📄 Document Services</h3>
-			  <p>PAN card, Aadhar update, voter ID, and more — all from the comfort of your home.</p>
-			</div>
-		  </div>
-	  
-		  <div class="service-card">
-			<a href="/services/government" class="card-image">
-				<img src={governmentimage.src} alt="Government Services" class="card-img" />
-			  </a>
-			<div class="card-text">
-			  <h3>🏛️ Government Schemes</h3>
-			  <p>Apply for PMAY, pensions, and subsidies with ease and accuracy.</p>
-			</div>
-		  </div>
-	  
-		  <div class="service-card">
-			<a href="/services/online-applications" class="card-image">
-				<img src={onlineapplicationimage.src} alt="Government Services" class="card-img" />
-			  </a>
-			<div class="card-text">
-			  <h3>🌐 Online Applications</h3>
-			  <p>Passports, licenses, scholarships — done quickly and correctly.</p>
-			</div>
-		  </div>
-		</div>
+
+	<section id="services">
+		<OurServices />
 	</section>
+	
+	<section id="What_we_provide">
+		<ServicesSection />
+	</section>
+
+
 
 <section id="contactform">
 	<ContactForm />
 </section>
+
 
     <section id="contact" class="contact">
       <h2>Need Help?</h2>
