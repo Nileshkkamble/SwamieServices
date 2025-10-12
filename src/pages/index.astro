@@ -1,13 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
-import '../styles/global.css'; // link to custom CSS
+import '../styles/global.css';
 import ContactForm from '../components/ContactForm.astro';
-import documentImage from '../assets/onlineservice1.avif';
-import governmentimage from '../assets/onlineeservice.jpeg';
-import onlineapplicationimage from '../assets/csc1.png';
 import ServicesSection from '../components/ServicesSection.astro';
 import OurServices from '../components/OurServices.astro';
+import Maparea from '../components/Maparea.astro';
+import ContactIcons from '../components/ContactIcons.astro';
 ---
 
 <Layout>
@@ -23,7 +22,7 @@ import OurServices from '../components/OurServices.astro';
 	<section id="services">
 		<OurServices />
 	</section>
-	
+
 	<section id="What_we_provide">
 		<ServicesSection />
 	</section>
@@ -35,12 +34,20 @@ import OurServices from '../components/OurServices.astro';
 </section>
 
 
+<section id="location">
+  <Maparea />
+</section>
+
+<section id="contactIcons">
+  <ContactIcons />
+</section>
+
+
     <section id="contact" class="contact">
       <h2>Need Help?</h2>
       <p>Call us or reach out via email for personalized assistance. We’re here to make digital services simple for everyone.</p>
     </section>
 
-	
   </main>
 </Layout>
 
